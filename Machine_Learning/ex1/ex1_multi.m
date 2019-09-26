@@ -51,9 +51,16 @@ fprintf('Normalizing Features ...\n');
 
 [X mu sigma] = featureNormalize(X);
 
+mu
+
+sigma
+
+%X(:,1) = featureNormalize(X(:,1));
+
+%X(:,2) = featureNormalize(X(:,2));
+
 % Add intercept term to X
 X = [ones(m, 1) X];
-
 
 %% ================ Part 2: Gradient Descent ================
 
@@ -106,6 +113,7 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+price = [1,-0.4412, -0.2234] * theta;
 
 % ============================================================
 
@@ -151,6 +159,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+price = [1,1650,3] * theta;
 
 % ============================================================
 
